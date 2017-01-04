@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form method="post" action="">
+	<label>Some number</label><br />
+    <input type="text" id="a" value="" required/><br />
+    <label>Some number</label><br />
+    <input type="text" id="b" value=""/><br />
+    <label>Some number</label><br />
+    <input type="text" id="c" value=""/><br />
+    <button tyoe="button" id="submit">Submit</button>
+</form>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$("#submit").click(function() {
+		var a = $("#a").val();
+		var b = $("#b").val();
+		var c = $("#c").val();
+		if(a.length == 0){
+			$(a).after('<p style="color:red">Vui lòng nhập vào trường này</p>')
+		}
+		if(b.length == 0){
+			$(b).after('<p style="color:red">Vui lòng nhập vào trường này</p>')
+		}
+		if(c.length == 0){
+			$(c).after('<p style="color:red">Vui lòng nhập vào trường này</p>')
+		}
+		if(a.length <  10){
+			$(a).after('<p style="color:red">Vui lòng nhập vào 10 ký tự trường này</p>')
+		}
+		if(b.length <10 ){
+			$(b).after('<p style="color:red">Vui lòng nhập vào 10 ký tự trường này</p>')
+		}
+		if(c.length < 10){
+			$(c).after('<p style="color:red">Vui lòng nhập vào 10 ký tự trường này</p>')
+		}
+		if(a.length <  7){
+			$(a).after('<p style="color:red">Vui lòng nhập vào 7 ký tự trường này</p>')
+		}
+		if(b.length < 7 ){
+			$(b).after('<p style="color:red">Vui lòng nhập vào 7 ký tự trường này</p>')
+		}
+		if(c.length < 7){
+			$(c).after('<p style="color:red">Vui lòng nhập vào 7 ký tự trường này</p>')
+		}
+	})						
+});
+</script>
+</body>
+</html>
